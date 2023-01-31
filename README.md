@@ -54,7 +54,6 @@ To obtain the same result in the paper, like this
 | [24 Levels](https://drive.google.com/file/d/1J_fTVuw6T8JWeQzK9DMOmAjW_aAoIx36/view?usp=sharing) | 2.96 | 0.34 |
 | [12 Levels](https://drive.google.com/file/d/1I87mN5C2MWkc5AWIgrUvtTkB0BJVGcUO/view?usp=sharing) | 3.05 | 0.33 |
 | **[Voxel (Ours)](https://drive.google.com/file/d/1zhx4STe9vu6cbQj_jblKLVAQy48yxazh/view?usp=sharing)** | **2.40** | **0.35** |
-|
 
 Under the ```./net/``` folder, after changing ```DATAPATH```, ```DATALIST```, and ```ckpt_path```, you can run
 ```

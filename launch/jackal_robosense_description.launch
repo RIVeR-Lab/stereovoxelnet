@@ -1,0 +1,19 @@
+<launch>
+  
+  <arg name="gpu" default="false"/>
+
+  <param name="robot_description"
+         command="$(find xacro)/xacro $(find stereo_pl_nav)/urdf/jackal_robosense.urdf.xacro
+                  gpu:=$(arg gpu)
+                  --inorder" />
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+  <node pkg="rslidar_sdk" name="rslidar_sdk_node" type="rslidar_sdk_node" output="screen">
+    <param name="config_path" value=""/>
+  </node>
+
+  <include file="$(find stereo_pl_nav)/launch/robosense_pointcloud_to_laser.launch" />
+
+  <!--<include file="$(find tentabot)/launch/others/robot_bringup/jackal/jackal_rviz.launch" /> -->
+
+</launch>

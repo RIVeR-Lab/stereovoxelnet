@@ -1,0 +1,5 @@
+*/__pycache__/
+logs/
+logs_bk/
+wandb/
+.ipynb_checkpoints/

@@ -1,0 +1,12 @@
+<launch>
+    <node pkg="tf" type="static_transform_publisher" name="camera_left"
+     args="0.06 0 0 0 0 0 camera_depth_optical_frame zed_left 100" />  
+    
+    <node pkg="tf" type="static_transform_publisher" name="camera_right"
+     args="-0.06 0 0 0 0 0 camera_depth_optical_frame zed_right 100" />  
+
+    <group ns="zed2" >
+        <node pkg="stereo_pl_nav" type="readZED2.py" name="readZED2" output="screen"/>
+        <node pkg="stereo_image_proc" type="stereo_image_proc" name="stereo_image_proc" output="screen" />
+    </group>
+</launch>

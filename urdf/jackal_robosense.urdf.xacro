@@ -1,0 +1,69 @@
+<?xml version="1.0" ?>
+<robot name="jackal_robosense" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:arg name="ns" default=""/>
+    <xacro:arg name="model" default=""/>
+    <xacro:arg name="gpu" default="false"/>
+
+    <xacro:property name="gpu" value="$(arg gpu)" />
+    <xacro:property name="path_meshes" value="package://tentabot/meshes" />
+    <xacro:property name="M_PI" value="3.1415926535897931" />
+    <xacro:property name="M_PI_2" value="1.570796327" />
+    
+    <!-- Import macro for materials-->
+    <xacro:include filename="$(find tentabot)/urdf/materials.xacro" />
+
+    <!-- Import mobile base -->
+    <xacro:include filename="$(find jackal_description)/urdf/jackal.urdf.xacro"/>
+
+    <!-- Import macro for lidar-->
+    <xacro:include filename="$(find velodyne_description)/urdf/VLP-16.urdf.xacro"/>
+
+    <!-- Import macro for camera-->
+    <xacro:include filename="$(find realsense2_description)/urdf/_d435i.urdf.xacro"/>
+    <!-- Instantiate sensors-->
+    
+    <!-- Create lidar instance -->
+    <xacro:VLP-16   parent="base_link" 
+                    name="robosense" 
+                    topic="/rslidar_points" 
+                    hz="10" 
+                    samples="440" 
+                    gpu="${gpu}">
+        <origin xyz="0.2 0 0.2" rpy="0 0 0" />
+    </xacro:VLP-16>
+
+    
+    <!--xacro:HDL-32E parent="base_link" name="velodyne2" topic="/velodyne_points2" hz="10" samples="220" gpu="${gpu}">
+        <origin xyz="0 0 0.6" rpy="0 0 0" />
+    </xacro:HDL-32E-->
+
+    <!--xacro:sick_lms1xx_mount prefix="jackal"
+        parent_link="base_link"
+        topic="jackal/scan"
+        min_range="0.2"
+        max_range="4.0">
+        <origin xyz="0 0 0.18" rpy="0 0 0" />
+    </xacro:sick_lms1xx_mount-->
+
+    <!-- Create camera instance -->
+    <!--xacro:realsense-rs200 
+        prefix="rs200_cam1" 
+        parent="$(arg ns)/base_link">
+        <origin xyz="0.0 0.0 0.2" rpy="0.0 0.0 0.0" />   
+    </xacro:realsense-rs200-->
+
+    <!-- Create camera instance 1.570796327 (turtlebot3 burger)-->
+    <!-- <xacro:realsense-d435
+        prefix="d435_cam1"
+        parent="base_link">
+        <origin xyz="0.2 0.0 0.15" rpy="0.0 0.0 0.0" />   
+    </xacro:realsense-d435> -->
+
+    <xacro:sensor_d435i parent="base_link" use_nominal_extrinsics="true">
+    <origin
+      xyz="0.2 0.0 0.15"
+      rpy="0.0 0.0 0.0" />
+  </xacro:sensor_d435i>
+
+</robot>

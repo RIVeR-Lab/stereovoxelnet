@@ -1,8 +1,8 @@
-# StereoVoxelNet
+# StereoVoxelNet: Real-Time Obstacle Detection Based on Occupancy Voxels from a Stereo Camera Using Deep Neural Networks
 
 ![StereoVoxelNet generates voxels from a stereo pair to represent the detected location of the obstacles at the range of 32 meters in a coarse-to-fine manner.](hie.gif)
 
-This is the repositary for paper "Real-Time Obstacle Detection Based on Occupancy Voxels From a Stereo Camera Using Deep Neural Networks". [\[Project Website\]](https://lhy.xyz/stereovoxelnet/)
+This is the repositary for paper "StereoVoxelNet: Real-Time Obstacle Detection Based on Occupancy Voxels from a Stereo Camera Using Deep Neural Networks". [\[Project Website\]](https://lhy.xyz/stereovoxelnet/)
 [\[arXiv\]](https://arxiv.org/abs/2209.08459) [\[Supplementary Video\]](https://www.youtube.com/watch?v=3wju1BbZITM)
 
 ## Credits

@@ -64,7 +64,7 @@ parser.add_argument('--optimizer', type=str, default="adam",
                     choices=["adam","sgd"])
 parser.add_argument('--cost_vol_type', type=str, default="even",
                     help='Choice of Cost Volume Type',
-                    choices=["even","eveneven","full","voxel","gwc","gwcvoxel","voxellite"])
+                    choices=["even","eveneven","full","voxel"])
 parser.add_argument('--log_folder_suffix', type=str, default="")
 parser.add_argument('--weighted_loss', action='store_true',
                     help='Enable weighted loss')

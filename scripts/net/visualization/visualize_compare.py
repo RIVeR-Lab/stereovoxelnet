@@ -4,7 +4,6 @@ sys.path.append('../')
 import os
 import torch.nn as nn
 from utils import *
-from utils.KittiColormap import *
 import cv2
 from datasets.data_io import get_transform, read_all_lines
 from PIL import Image

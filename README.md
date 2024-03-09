@@ -24,7 +24,9 @@ The code is tested on following libraries. Libraries with other versions might a
 StereoVoxelNet is trained and evaluated using [DrivingStereo](https://drivingstereo-dataset.github.io/) dataset. Please make sure to download their training and testing data and extract to any folder you prefer.
 
 ### Our Dataset
-We collect a dataset for finetuning. [Our dataset](https://app.globus.org/file-manager?origin_id=09b35740-377b-11ed-89ce-ede5bae4f491&origin_path=%2F) is shared via Globus.
+We collect a dataset for finetuning. 
+~~[Our dataset](https://app.globus.org/file-manager?origin_id=09b35740-377b-11ed-89ce-ede5bae4f491&origin_path=%2F) is shared via Globus.~~
+Globus might have some issues now, we've migrated it to [Google Drive](https://drive.google.com/drive/folders/1tQ1G0yUazbBiAxiOmdpvEUV3JSveTAF8?usp=sharing)
 
 ## Evaluation
 
